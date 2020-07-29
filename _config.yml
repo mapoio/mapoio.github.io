@@ -11,7 +11,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # Publish posts or collection documents with a future date.
 future: false
 
-# SNS settings
+# SNS setting
 RSS: true
 weibo_username:     false
 zhihu_username:     mapoio
