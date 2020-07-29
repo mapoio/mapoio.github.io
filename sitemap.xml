@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://mapo.io/2019/04/05/hello-2019/</loc>
+<lastmod>2019-04-05T02:25:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://mapo.io/2019/04/06/how-to-depoly-jekyll/</loc>
+<lastmod>2019-04-06T00:25:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://mapo.io/about/</loc>
+</url>
+<url>
+<loc>https://mapo.io/archive/</loc>
+</url>
+<url>
+<loc>https://mapo.io/</loc>
+</url>
+<url>
+<loc>https://mapo.io/offline.html</loc>
+</url>
+</urlset>
