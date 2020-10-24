@@ -1,0 +1,93 @@
+# Config
+rss: /atom.xml
+bio: 种一棵树的最好时间是十年前，其次是现在
+post_toc: true
+
+# Keywords
+keywords: hexo, casper, ghost, theme
+
+# Menu
+menu:
+  ABOUT: /about
+  ARCHIVES: /archives
+  # you can add here
+
+# author
+author_image:   # link
+author_bio: 
+author_location: 
+
+# Social Links
+social:
+  weibo: 
+  github: https://github.com/mapoio
+  twitter: 
+  facebook: 
+  telegram:
+  bilibili: 
+  youtube: 
+  # You only can use that I have added, I will keep adding
+
+# Footer Links
+# footer: 
+#   RSS: /atom.xml
+  # 粤ICP备xxxxxxx号-x: http://www.miitbeian.gov.cn
+  # 粤公网安备xxxxxxx号: http://www.beian.gov.cn
+
+# Widget
+widgets:
+  recent_posts: true
+  category: true
+  tagcloud: true
+  # This is a simple theme, I think 3 is enough.
+
+# Post page fload header
+floadheader: false
+
+# Gallery
+# https://github.com/dimsemenov/PhotoSwipe
+photoswipe: true
+
+# LazyLoad
+# home page has enabled, this value is to post page
+# https://github.com/dinbror/blazy
+lazyload: true
+
+# Local Search
+local_search: true
+
+# Comment
+# https://valine.js.org
+comment: false
+valine:
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki 
+  verify: false # Verification code
+  appId: # your leancloud application appid
+  appKey: # your leancloud application appkey
+  placeholder: Just go go # comment box placeholder
+  pageSize: 10 # pagination size
+  avatar: mm # gravatar style
+  visitor: true # page view record
+
+gitalk:
+  active: true
+  clientID: 'fa4577cfb667bd719581'
+  clientSecret: '634c2e561edfa65568dfee8dc12dcc9d29c106b3'
+  repo: 'gitalk'
+  owner: 'mapoio'
+  admin: 'mapoio'
+  distractionFreeMode: false
+
+# PWA
+# you need create a manifest.json file in hexo's source folder
+manifest: false
+service_workers: false
+
+navColor: '3c484e'
+
+# Baidu Push
+baidu: false
+
+# Google Analytics
+googleAnalytics: true
+GA_TRACKING_ID: UA-137551468-1

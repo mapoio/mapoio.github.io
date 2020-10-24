@@ -1,0 +1,35 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cross-env APP_ENV=prod hexo generate",
+    "clean": "cross-env APP_ENV=prod hexo clean",
+    "deploy": "cross-env APP_ENV=prod hexo deploy",
+    "server": "cross-env APP_ENV=dev hexo server"
+  },
+  "hexo": {
+    "version": "4.2.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cross-env": "^7.0.2",
+    "hexo": "^4.2.1",
+    "hexo-admonition": "^1.1.2",
+    "hexo-feed": "^1.0.2",
+    "hexo-filter-mermaid-diagrams": "^1.0.5",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-index": "^1.0.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-inject": "^1.0.0",
+    "hexo-math": "^3.0.4",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-stylus": "^1.1.0",
+    "hexo-server": "^1.0.0"
+  },
+  "devDependencies": {
+    "hexo-filter-flowchart": "^1.0.4"
+  }
+}
