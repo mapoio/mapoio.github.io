@@ -5,7 +5,7 @@
     <div class="search-form">
         {% if theme.favicon %}
         <div class="search-overlay-logo">
-        	<img src="{{ theme.favicon }}" alt="{{ config.title }}">
+        	<img src="{{ cdn_img(theme.favicon) }}" alt="{{ config.title }}">
         </div>
         {% endif %}
         <input id="local-search-input" class="search-input" type="text" name="search" placeholder="{{ __('search') }} ...">

@@ -129,7 +129,7 @@ feed:
 math:
   engine: 'mathjax'
   mathjax: 
-    src: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    src: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
   per_page: false
 
 flowchart:
