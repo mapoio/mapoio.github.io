@@ -1,11 +1,11 @@
 ---
-title: 让你的网站支持macOS和IOS的深色模式
+title: 让你的网站支持macOS和IOS的深色模式(测试文章)
 cover_img: /images/app.png
 date: 2019-03-26 12:52:01
 tags: 
 - web
 - macOS
-categories: WEB
+categories: WEB, 测试
 mathjax: true
 description: macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可
 keywords: 深色模式, Dark Mode, macOS Mojave, prefers-color-scheme, CSS, 暗黑主题
