@@ -1,0 +1,588 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn.jsdelivr.net">
+	<link rel="preconnect" href="//unpkg.com">
+
+	<title>让你的网站支持macOS和IOS的深色模式(测试文章) | 麻婆酱</title>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="Mapo">
+	<meta name="description" content="macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可">
+
+	
+	<meta name="keywords" content="深色模式, Dark Mode, macOS Mojave, prefers-color-scheme, CSS, 暗黑主题">
+	
+
+	
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	
+
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
+
+	
+
+	
+	<link rel="alternate" href="/atom.xml" title="麻婆酱">
+	
+
+	<meta property="og:site_name" content="麻婆酱">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="让你的网站支持macOS和IOS的深色模式(测试文章) | 麻婆酱">
+	<meta property="og:description" content="macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可">
+	<meta property="og:url" content="https://mapo.io/2019/03/26/website-darkmode-on-macos/">
+
+	
+	<meta property="article:published_time" content="2019-03-26T12:03:00+08:00"> 
+	<meta property="article:author" content="Mapo">
+	<meta property="article:published_first" content="麻婆酱, /2019/03/26/website-darkmode-on-macos/">
+	<link rel="alternate" type="application/rss+xml" title="麻婆酱" href="/rss.xml">
+    <link rel="alternate" type="application/atom+xml" title="麻婆酱" href="/atom.xml">
+    <link rel="alternate" type="application/json" title="麻婆酱" href="/feed.json">
+	
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/screen.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/style.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/markdown.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/highlight.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/darkmode.css">
+
+
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitalk/gitalk/dist/gitalk.css">
+	
+	
+
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137551468-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-137551468-1');
+	</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+	
+	
+	
+</head>
+
+<body class="post-template">
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-wrapper">
+		
+
+
+
+
+<header class="site-header post-site-header outer">
+    <div class="inner">
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        
+        <a class="site-nav-logo" href="/" title="麻婆酱">
+            <img src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/favicon.png" alt="麻婆酱">
+        </a>
+        
+        <div class="site-nav-content">
+        <ul class="nav">
+            <li>
+                <a href="/" title="Home">HOME</a>
+            </li>
+            
+            
+            <li>
+                <a href="/about" title="ABOUT">ABOUT</a>
+            </li>
+            
+            <li>
+                <a href="/archives" title="ARCHIVES">ARCHIVES</a>
+            </li>
+            
+            
+        </ul>
+        
+            <span class="nav-post-title">让你的网站支持macOS和IOS的深色模式(测试文章)</span>
+        
+        </div>
+    </div>
+    
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="search-button">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/mapoio" target="_blank" rel="noopener">
+        <svg viewBox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
+    </a>
+    
+    
+    
+    
+    
+    
+</div>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<div id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <header class="post-full-header">
+            <div class="post-full-meta">
+                
+                
+                <a href="/categories/WEB-%E6%B5%8B%E8%AF%95/">WEB, 测试</a>  
+                
+                
+            </div>
+            <h1 class="post-full-title">让你的网站支持macOS和IOS的深色模式(测试文章)</h1>
+            
+            <p class="post-full-custom-excerpt">macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可</p>
+            
+        </header>
+
+        
+        <figure class="post-title-image">
+            <img srcset="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/app.png 300w,
+                        https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/app.png 600w,
+                        https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/app.png 1000w,
+                        https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/app.png 2000w" sizes="(max-width: 800px) 400px,
+                    (max-width: 1170px) 1170px,
+                        2000px" src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/app.png" alt="让你的网站支持macOS和IOS的深色模式(测试文章)">
+        </figure>
+        
+        <div class="post-full no-image">
+            
+            <div class="post-full-content">
+                <article id="photoswipe" class="post-markdown-body">
+                    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果你在使用 macOS 10.14.4 或者之后的系统，在系统内开启深色模式，打开 Safari 浏览器，你会发现我的博客变成了暗黑版本。</p>
+<p class="success">本文发表于2019-03-26，而在2019-06-04凌晨，Apple 发布了 IOS 13，本文所说的方法也同时适用于 IOS Safari</p>
+
+<p class="success">2019-08-08 今天突然发现 Chrome 也支持了</p>
+
+<p>深色模式（Dark Mode）是 Apple 在 macOS Mojave 上全新推出的一项功能，macOS 内置的 App 能完美支持，凭借着易用的接口，越来越多的第三方 App 已经进行了适配，可大家使用最多的浏览器却没能很好的支持，虽然你可以使用 Safari 的阅读视图浏览深色模式下的页面内容，但体验终归没有网站自身支持的好。</p>
+<p>原因主要有两个，一是浏览器没有给出让开发者适配的接口，二是网站设计并不统一，强行进入深色模式会破坏页面的设计和内容的可读性。</p>
+<p>于是经过几次的升级，macOS 终于在 Safari 12.1 中加入了一个新的媒体查询 <code>prefers-color-scheme</code>，并且 FireFox 67 也开始进行支持，其他浏览器的具体支持情况可在这里查看：<a href="https://caniuse.com/#search=prefers-color-scheme" target="_blank" rel="noopener">https://caniuse.com/#search=prefers-color-scheme</a></p>
+<h2 id="数学公式测试"><a href="#数学公式测试" class="headerlink" title="数学公式测试"></a>数学公式测试</h2><p>$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$</p>
+<pre class="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!</pre>
+
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Name:   prefers-color-scheme</span><br><span class="line">For:    @media</span><br><span class="line">Value:  no-preference | light | dark</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>no-preference：无颜色偏好</li>
+<li>light：浅色模式</li>
+<li>dark：深色模式</li>
+</ul>
+<p>和你是用的其他媒体查询一样，用起来很简单</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> light) {</span><br><span class="line">    <span class="comment">/* 浅色模式样式 */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) {</span><br><span class="line">    <span class="comment">/* 深色模式样式 */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>默认都是浅色模式的，所以我们只写深色模式的样式就行</p>
+<h2 id="使用CSS变量"><a href="#使用CSS变量" class="headerlink" title="使用CSS变量"></a>使用CSS变量</h2><p>现在也页面都会涉及到大量的样式，要适配深色模式，最好使用变量。</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> {</span><br><span class="line">  <span class="attribute">--background-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">--content-color</span>: <span class="number">#15171A</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) {</span><br><span class="line">  <span class="selector-pseudo">:root</span> {</span><br><span class="line">    <span class="attribute">--background-color</span>: <span class="number">#222</span>;</span><br><span class="line">    <span class="attribute">--content-color</span>: <span class="number">#dfdfdf</span>;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main-page</span> {</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">var</span>(--background-color);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.full-content</span> {</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">var</span>(--content-color)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上面的例子中，只定义了几个颜色相关的样式，事实上你可以跟其他媒体查询一样，定义其他的样式，让你的深色模式有更多不同的布局。</p>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>颜色这个就看自己喜欢了，不过要注意一点，如果你是使用 macOS 内置 App 的配色，强调色会改变一些基础配色，比如强调色不是石墨色的时候，背景颜色会变得比较暖。</p>
+<p>在设置颜色的时候，要保证内容的可读性，我们需要将文本和背景的颜色对比度保持在一个安全的范围内，这时候你需要用到这个工具： <a href="https://github.com/leaverou/contrast-ratio" target="_blank" rel="noopener">https://github.com/leaverou/contrast-ratio</a></p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>在写好颜色相关的样式之后，你会发现页面上的图片变得很刺眼，这时你可以降低一下图片的透明度，具体降多少也是看你背景设置的色深，另外可以设置一下鼠标悬停时恢复透明度，这样能有更好的体验。</p>
+<p>我用的 blazy 懒加载，所以是这样设置的</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) {</span><br><span class="line">    <span class="selector-class">.b-lazy</span><span class="selector-class">.b-loaded</span> {</span><br><span class="line">        <span class="attribute">opacity</span>: .<span class="number">9</span>;</span><br><span class="line">        <span class="attribute">transition</span>: opacity .<span class="number">5s</span> ease-in-out;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.b-lazy</span><span class="selector-class">.b-loaded</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>在深色模式推出之后，得到了不错的反响，我认为 IOS 13 会引入一定深色模式。另外，Windows 也有“暗”模式，相信越来越多的应用会进行这样深色模式的适配，在 macOS 10.14.4 升级之后，我在第一时间进行了博客主题更新，只有大家都用了这个新的媒体查询，才会推动其他平台和浏览器的适配，好东西值得推崇。</p>
+<blockquote>
+<p>本文章发表于底噪博客 <a href="https://zhih.me" target="_blank" rel="noopener">https://zhih.me</a> , 转载请注明<br>直接偷的人，你打球真蔡</p>
+</blockquote>
+
+                </article>
+                <ul class="tags-postTags">
+                    
+                    <li>
+                        <a href="/tags/web/" rel="tag"># web</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/macOS/" rel="tag"># macOS</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="inner">
+        <div id="gitalk-container"></div>
+    </div>
+    
+</div>
+
+<div class="toc-bar">
+    <div class="toc-btn-bar">
+        <a href="#site-main" class="toc-btn">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M793.024 710.272a32 32 0 1 0 45.952-44.544l-310.304-320a32 32 0 0 0-46.4 0.48l-297.696 320a32 32 0 0 0 46.848 43.584l274.752-295.328 286.848 295.808z"/></svg>
+        </a>
+        <div class="toc-btn toc-switch">
+            <svg class="toc-open" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M779.776 480h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M779.776 672h-387.2a32 32 0 0 0 0 64h387.2a32 32 0 0 0 0-64M256 288a32 32 0 1 0 0 64 32 32 0 0 0 0-64M392.576 352h387.2a32 32 0 0 0 0-64h-387.2a32 32 0 0 0 0 64M256 480a32 32 0 1 0 0 64 32 32 0 0 0 0-64M256 672a32 32 0 1 0 0 64 32 32 0 0 0 0-64"/></svg>
+            <svg class="toc-close hide" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M512 960c-247.039484 0-448-200.960516-448-448S264.960516 64 512 64 960 264.960516 960 512 759.039484 960 512 960zM512 128.287273c-211.584464 0-383.712727 172.128262-383.712727 383.712727 0 211.551781 172.128262 383.712727 383.712727 383.712727 211.551781 0 383.712727-172.159226 383.712727-383.712727C895.712727 300.415536 723.551781 128.287273 512 128.287273z"/><path d="M557.05545 513.376159l138.367639-136.864185c12.576374-12.416396 12.672705-32.671738 0.25631-45.248112s-32.704421-12.672705-45.248112-0.25631l-138.560301 137.024163-136.447897-136.864185c-12.512727-12.512727-32.735385-12.576374-45.248112-0.063647-12.512727 12.480043-12.54369 32.735385-0.063647 45.248112l136.255235 136.671523-137.376804 135.904314c-12.576374 12.447359-12.672705 32.671738-0.25631 45.248112 6.271845 6.335493 14.496116 9.504099 22.751351 9.504099 8.12794 0 16.25588-3.103239 22.496761-9.247789l137.567746-136.064292 138.687596 139.136568c6.240882 6.271845 14.432469 9.407768 22.65674 9.407768 8.191587 0 16.352211-3.135923 22.591372-9.34412 12.512727-12.480043 12.54369-32.704421 0.063647-45.248112L557.05545 513.376159z"/></svg>
+        </div>
+        <a href="#gobottom" class="toc-btn">
+            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M231.424 346.208a32 32 0 0 0-46.848 43.584l297.696 320a32 32 0 0 0 46.4 0.48l310.304-320a32 32 0 1 0-45.952-44.544l-286.848 295.808-274.752-295.36z"/></svg>
+        </a>
+    </div>
+    <div class="toc-main">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式测试"><span class="toc-text">数学公式测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单使用"><span class="toc-text">简单使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用CSS变量"><span class="toc-text">使用CSS变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后话"><span class="toc-text">后话</span></a></li></ol>
+    </div>
+</div>
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+	</div>
+	
+		
+
+
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+
+            <article class="read-next-card">
+                <header class="read-next-card-header">
+                    <h3><span>最新文章</span></h3>
+                </header>
+                <div class="read-next-card-content">
+                    <ul>
+                        
+                        
+                        
+                        <li>
+                            <h4><a href="/2019/03/26/website-darkmode-on-macos/">让你的网站支持macOS和IOS的深色模式(测试文章)</a></h4>
+                            <div class="read-next-card-meta">
+                                <p><time datetime="2019-03-26">26 3月 2019</time> –
+                                    5min read</p>
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                <footer class="read-next-card-footer">
+                    <a href="/archives">
+                          MORE  → 
+                    </a>
+                </footer>
+            </article>
+
+            
+            
+        </div>
+    </div>
+</aside>
+
+
+	
+	
+
+
+
+
+<div id="search" class="search-overlay">
+    <div class="search-form">
+        
+        <div class="search-overlay-logo">
+        	<img src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/favicon.png" alt="麻婆酱">
+        </div>
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="搜索 ...">
+        <a class="search-overlay-close" href="#"></a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<div class="copyright">
+			<a href="/" title="麻婆酱">麻婆酱 © 2021</a>
+			
+				
+    		
+		</div>
+		<nav class="site-footer-nav">
+			
+			<a href="/atom.xml" title="RSS" target="_blank" rel="noopener">RSS</a>
+			
+			<a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+		</nav>
+	</div>
+</footer>
+	
+
+
+<script>
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }
+        })
+    }
+</script>
+
+
+
+
+<script id="scriptLoad" src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/js/allinone.min.js" async></script>
+
+
+<script>
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        
+        
+            var bLazy = new Blazy();
+        
+
+        
+        
+
+        
+        
+        
+            searchFunc("/");
+        
+        
+    });
+
+    (function (window, document) {
+        // set up Casper as a global object
+        if (!window.Casper) {
+            window.Casper = {};
+        }
+
+        window.Casper.stickyNavTitle = function stickyNavTitle(options) {
+            var nav = document.querySelector(options.navSelector);
+            var title = document.querySelector(options.titleSelector);
+
+            var lastScrollY = window.scrollY;
+            var ticking = false;
+
+            function onScroll() {
+                lastScrollY = window.scrollY;
+                requestTick();
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(update);
+                }
+                ticking = true;
+            }
+
+            function update() {
+                var trigger = title.getBoundingClientRect().top + window.scrollY;
+                var triggerOffset = title.offsetHeight + 35;
+
+                // show/hide post title
+                if (lastScrollY >= trigger + triggerOffset) {
+                    nav.classList.add(options.activeClass);
+                } else {
+                    nav.classList.remove(options.activeClass);
+                }
+
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', onScroll, {passive: true});
+
+            update();
+        };
+    })(window, document);
+    
+    
+        Casper.stickyNavTitle({
+            navSelector: '.post-site-header',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+    
+
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/photoswipe/photoswipe.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/photoswipe/default-skin/default-skin.css">
+
+
+<script src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/photoswipe/photoswipe.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+
+
+<script id="mermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid@8.5.1/dist/mermaid.min.js" async></script>
+<script>
+    document.getElementById('mermaidScript').addEventListener('load',function(){
+        if (window.mermaid) {
+            mermaid.initialize({"theme":"default"});
+        }
+    });
+</script>
+
+
+
+
+
+
+
+<script id="gitalkScript" src="https://cdn.jsdelivr.net/gh/gitalk/gitalk/dist/gitalk.min.js" async></script>
+<script>
+    document.getElementById('gitalkScript').addEventListener("load", function() {
+        var gitalk = new Gitalk({
+            clientID: 'fa4577cfb667bd719581',
+            clientSecret: '634c2e561edfa65568dfee8dc12dcc9d29c106b3',
+            repo: 'gitalk',      // The repository of store comments,
+            owner: 'mapoio',
+            admin: 'mapoio'.split(',').map(function (i) { return i.trim() }),
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        });
+        gitalk.render('gitalk-container')
+    });
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+
+
+
+
+</body></html>

@@ -1,561 +1,361 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="zh-CN"><head>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="//www.googletagmanager.com">
+	<link rel="preconnect" href="//zz.bdstatic.com">
+	<link rel="preconnect" href="//sp0.baidu.com">
+	<link rel="preconnect" href="//www.google-analytics.com">
+	<link rel="preconnect" href="//cdn.jsdelivr.net">
+	<link rel="preconnect" href="//unpkg.com">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="种一棵树，让它在时间的深度和长度中慢慢生长 | Mapo，Node.js & React.js Developer | 与君共勉，现在就是最好的时机">
-    <meta name="keywords"  content="Mapo, Mapo博客, Mapo Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, Node.js">
-    <meta name="theme-color" content="#000000">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Mapo的博客 | Mapo Blog">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="种一棵树，让它在时间的深度和长度中慢慢生长">
-    
-    <meta property="og:image" content="https://mapo.io/img/avatar-mapo-ny.png">
-    <meta property="og:url" content="https://mapo.io/">
-    <meta property="og:site_name" content="Mapo的博客 | Mapo Blog">
-    
-    <title>Mapo的博客 | Mapo Blog</title>
+	<title>麻婆酱 | 前沿观察</title>
 
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/pwa/manifest.json">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<meta name="generator" content="hexo">
+	<meta name="author" content="Mapo">
+	<meta name="description" content="种一棵树的最好时间是十年前，其次是现在">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://mapo.io/">
+	
+	<meta name="keywords" content="hexo, casper, ghost, theme">
+	
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+	
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/hux-blog.min.css">
+	
+	<meta name="theme-color" content="#3c484e">
+	<meta name="msapplication-TileColor" content="#3c484e">
+	
 
-    <!-- Custom Fonts -->
-    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	
+	<link rel="alternate" href="/atom.xml" title="麻婆酱">
+	
+
+	<meta property="og:site_name" content="麻婆酱">
+	<meta property="og:type" content="blog">
+	<meta property="og:title" content="麻婆酱 | 前沿观察">
+	<meta property="og:description" content="种一棵树的最好时间是十年前，其次是现在">
+	<meta property="og:url" content="https://mapo.io/index.html">
+
+	
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/screen.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/style.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/markdown.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/highlight.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/css/darkmode.css">
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	
+	
 
-    <!-- ga & ba script hoook -->
-    <script></script>
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137551468-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-137551468-1');
+	</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+	
+	
+	
 </head>
 
+<body class="home-template">
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="site-wrapper">
+		
 
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
 
-    <!-- Navigation -->
 
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
 
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Mapo</a>
+<header class="site-header outer " style="background-image: url(https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/background.jpg)">
+    <div class="inner">
+        
+        
+        <div class="site-header-content">
+            
+            
+            <h1 class="site-title">
+                麻婆酱
+            </h1>
+            <h2 class="site-description">种一棵树的最好时间是十年前，其次是现在</h2>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    
-                    
-                    
-                    
-                    <li>
-                        <a href="/about/">About</a>
-                    </li>
-                    
-                    
-                    
-                    <li>
-                        <a href="/archive/">Archive</a>
-                    </li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                </ul>
-            </div>
+        
+        
+        
+<nav class="site-nav"> 
+    <div class="site-nav-left">
+        
+        <div class="site-nav-content">
+        <ul class="nav">
+            <li>
+                <a href="/" title="Home">HOME</a>
+            </li>
+            
+            
+            <li>
+                <a href="/about" title="ABOUT">ABOUT</a>
+            </li>
+            
+            <li>
+                <a href="/archives" title="ARCHIVES">ARCHIVES</a>
+            </li>
+            
+            
+        </ul>
+        
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
+    
+    <div class="search-button-area">
+        <a href="#search" class="search-button">Search ...</a>
+    </div>
+     
+    <div class="site-nav-right">
+        
+        <a href="#search" class="search-button">Search ...</a>
+         
+        
+<div class="social-links">
+    
+    
+    <a class="social-link" title="github" href="https://github.com/mapoio" target="_blank" rel="noopener">
+        <svg viewBox="0 0 1049 1024" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z"/></svg>
+    </a>
+    
+    
+    
+    
+    
+    
+</div>
+    </div>
 </nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    var __HuxNav__ = {
-        close: function(){
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        },
-        open: function(){
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-
-    // Bind Event
-    $toggle.addEventListener('click', function(e){
-        if ($navbar.className.indexOf('in') > 0) {
-            __HuxNav__.close()
-        }else{
-            __HuxNav__.open()
-        }
-    })
-
-    /**
-     * Since Fastclick is used to delegate 'touchstart' globally
-     * to hack 300ms delay in iOS by performing a fake 'click',
-     * Using 'e.stopPropagation' to stop 'touchstart' event from 
-     * $toggle/$collapse will break global delegation.
-     * 
-     * Instead, we use a 'e.target' filter to prevent handler
-     * added to document close HuxNav.  
-     *
-     * Also, we use 'click' instead of 'touchstart' as compromise
-     */
-    document.addEventListener('click', function(e){
-        if(e.target == $toggle) return;
-        if(e.target.className == 'icon-bar') return;
-        __HuxNav__.close();
-    })
-</script>
-
-
-    <!-- Page Header -->
-
-
-
-
-
-
-
-<header class="intro-header" style="background-image: url('/img/home-bg-red.jpg')">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-        <div class="site-heading">
-        
-          <h1>Mapo</h1>
-          <span class="subheading">种一棵树，让它在时间的深度和长度中慢慢生长</span>
-        </div>
-      </div>
     </div>
-  </div>
 </header>
 
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-        
-
-<!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                postlist-container
-            ">
-    			
-<div class="post-preview">
-    <a href="/2019/04/06/how-to-depoly-jekyll/">
-        <h2 class="post-title">
-            同时部署Jekyll到Github和Coding的Pages服务上
-        </h2>
-        
-        <h3 class="post-subtitle">
-            同时部署多个节点，加速国内访问
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  记录了我的博客部署过程，非常感谢Github、Coding提供的Pages服务，Gitalk提供的开源评论方案，Jekyll提供的博客方案。
-
-
-准备工作
-在部署Jekyll之前需要准备一些小东西。
-
-  一个Github账号
-  一个Coding或者Gitee账号
-  一个简单好记的域名（实话，io域名还是有点贵的，top域名最便宜。主要是我抢到了四位字母的域名实在是不舍得放弃）
- ...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Mapo on April 6, 2019
-    </p>
-</div>
-<hr>
-
-<div class="post-preview">
-    <a href="/2019/04/05/hello-2019/">
-        <h2 class="post-title">
-            开始写博客
-        </h2>
-        
-        <h3 class="post-subtitle">
-             "开始很难，坚持也很难"
-        </h3>
-        
-        <div class="post-content-preview">
-            
-                
-  “总算是开始了”
-
-
-前言
-
-以前一直都想好好地写一个博客，把自己工作和学习中的东西记录下来。但是每次打好博客架子后就没写了，真的是很沮丧，但是我还是要尝试一下，想要坚持下去。把自己做过的，想过的，思考过的事物记录下来。我不仅要记录技术上东西，还有一些思考，想法或者是发现。如果能够帮到其他人，也是非常开心的事情。
-
-开始不是一件简单的事
-正如前言中所说，每次一开始就放弃了。没有好好坚持...
-            
-        </div>
-    </a>
-    <p class="post-meta">
-        Posted by Mapo on April 5, 2019
-    </p>
-</div>
-<hr>
-
-
-<!-- Pager -->
-
-
-    		</div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                
-
-
-<section>
-    
-    <h5><a href="/archive/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-        
-        
-        </a>
-        
-        
-                <a data-sort="0000" 
-                    href="/archive/?tag=%E8%AE%B0%E5%BD%95"
-                    title="记录"
-                    rel="2">记录
-    </div>
-</section>
-
-
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-  <hr>
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-    
-    <img src="/img/avatar-mapo-ny.png" />
-    
-    
-    <p>种一棵树，让它在时间的深度和长度中慢慢生长。</p>
-    
-    <!-- SNS Link -->
-    
-
-
-<ul class="list-inline">
-
-
-  
-  <li>
-    <a href="/feed.xml">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a href="https://twitter.com/isheng">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/mapoio">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  
-  
-  
-  
-  <li>
-    <a target="_blank" href="https://github.com/mapoio">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-</ul>
-  </div>
-</section>
-
-                <!-- Friends Blog -->
-                
-<hr>
-<h5>FRIENDS</h5>
-<ul class="list-inline">
-  
-  <li><a href="https://blog.woodcoding.com">WoodCoding</a></li>
-  
-</ul>
-
-    		</div>
-        
+<div id="site-main" class="site-main outer" role="main">
+	<div class="inner">
+		<div class="post-feed">
+			
+			<article class="post-card post ">
+				
+				<a class="post-card-image-link" title="让你的网站支持macOS和IOS的深色模式(测试文章)" href="/2019/03/26/website-darkmode-on-macos/">
+					<div class="post-card-image b-lazy" data-src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/app.png"></div>
+				</a>
+				
+				<div class="post-card-content">
+					<a class="post-card-content-link" title="让你的网站支持macOS和IOS的深色模式(测试文章)" href="/2019/03/26/website-darkmode-on-macos/">
+						<header class="post-card-header">
+							<span class="post-card-tags">
+								
+								
+								WEB, 测试
+								
+								
+							</span>
+							<h2 class="post-card-title">让你的网站支持macOS和IOS的深色模式(测试文章)</h2>
+						</header>
+						<div class="post-card-excerpt">
+							<p>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可
+								
+							</p>
+						</div>
+					</a>
+					<footer class="post-card-meta">
+						<div class="author-list">
+							<div class="author-list-item">
+								<div class="author-name-tooltip">Mapo</div>
+								
+								<a href="/about" class="static-avatar author-profile-image">
+									<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+								</a>
+								
+							</div>
+						</div>
+						<span class="reading-time">
+							5
+							min read
+						</span>
+					</footer>
+				</div>
+			</article>
+			
+		</div>
 	</div>
 </div>
 
 
 
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <!-- SNS Link -->
-                
+<div class="outer">
+	<nav class="pagination">
+		
+	</nav>
+</div>
 
 
-<ul class="list-inline text-center">
+
+	</div>
+	
+	
 
 
-  
-  <li>
-    <a href="/feed.xml">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a href="https://twitter.com/isheng">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-  <li>
-    <a target="_blank" href="https://www.zhihu.com/people/mapoio">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa  fa-stack-1x fa-inverse">知</i>
-      </span>
-    </a>
-  </li>
-  
-  
-  
-  
-  <li>
-    <a target="_blank" href="https://github.com/mapoio">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-</ul>
 
-                <p class="copyright text-muted">
-                    Copyright &copy; Mapo 2020
-                    <br>
-                    Powered by <a href="https://jekyllrb.com">Jekyll</a> | Designed By <a href="http://huangxuan.me">Hux</a>
-                    <!-- <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true" >
-                    </iframe> -->
-                </p>
-            </div>
+
+<div id="search" class="search-overlay">
+    <div class="search-form">
+        
+        <div class="search-overlay-logo">
+        	<img src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/images/favicon.png" alt="麻婆酱">
         </div>
+        
+        <input id="local-search-input" class="search-input" type="text" name="search" placeholder="搜索 ...">
+        <a class="search-overlay-close" href="#"></a>
     </div>
+    <div id="local-search-result"></div>
+</div>
+
+<footer class="site-footer outer">
+	<div class="site-footer-content inner">
+		<div class="copyright">
+			<a href="/" title="麻婆酱">麻婆酱 © 2021</a>
+			
+		</div>
+		<nav class="site-footer-nav">
+			
+			<a href="/atom.xml" title="RSS" target="_blank" rel="noopener">RSS</a>
+			
+			<a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+			<a href="https://github.com/xzhih/hexo-theme-casper" title="Casper" target="_blank" rel="noopener">Casper</a>
+		</nav>
+	</div>
 </footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js "></script>
-
-<!-- Bootstrap Core JavaScript -->
-<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
-<script src="/js/bootstrap.min.js "></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/hux-blog.min.js "></script>
-
-<!-- Service Worker -->
-
-<script src="/js/snackbar.js "></script>
-<script src="/js/sw-registration.js "></script>
+	
 
 
-<!-- async load function -->
 <script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+    if(window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }
+        })
     }
 </script>
 
-<!--
-     Because of the native support for backtick-style fenced code blocks
-     right within the Markdown is landed in Github Pages,
-     From V1.6, There is no need for Highlight.js,
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
-     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
 
 
 
+<script id="scriptLoad" src="https://cdn.jsdelivr.net/mapoio/mapoio.github.io@1.0/js/allinone.min.js" async></script>
 
-
-<!--fastClick.js -->
-<script>
-    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-<!-- Google Analytics -->
 
 <script>
-    // dynamic User by Hux
-    var _gaId = 'UA-137551468-1';
-    var _gaDomain = 'mapo.io';
+    document.getElementById('scriptLoad').addEventListener('load', function () {
+        
+        
+            var bLazy = new Blazy();
+        
 
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        
 
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
+        
+        
+        
+            searchFunc("/");
+        
+        
+    });
+
+    (function (window, document) {
+        // set up Casper as a global object
+        if (!window.Casper) {
+            window.Casper = {};
+        }
+
+        window.Casper.stickyNavTitle = function stickyNavTitle(options) {
+            var nav = document.querySelector(options.navSelector);
+            var title = document.querySelector(options.titleSelector);
+
+            var lastScrollY = window.scrollY;
+            var ticking = false;
+
+            function onScroll() {
+                lastScrollY = window.scrollY;
+                requestTick();
+            }
+
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(update);
+                }
+                ticking = true;
+            }
+
+            function update() {
+                var trigger = title.getBoundingClientRect().top + window.scrollY;
+                var triggerOffset = title.offsetHeight + 35;
+
+                // show/hide post title
+                if (lastScrollY >= trigger + triggerOffset) {
+                    nav.classList.add(options.activeClass);
+                } else {
+                    nav.classList.remove(options.activeClass);
+                }
+
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', onScroll, {passive: true});
+
+            update();
+        };
+    })(window, document);
+    
+    
+
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
-<!-- Baidu Tongji -->
-
-
-
-<!-- Side Catalog -->
-
-
-
-<!-- Multi-Lingual -->
 
 
 
 
-<!-- Image to hack wechat -->
-<img src="/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
 
-</body>
 
-</html>
+
+
+
+
+
+
+
+</body></html>

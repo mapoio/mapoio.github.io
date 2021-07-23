@@ -1,0 +1,69 @@
+  
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>麻婆酱</title>
+        <link>https://mapo.io</link>
+        <description>种一棵树的最好时间是十年前，其次是现在</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 26 Mar 2019 12:52:01 +0000</pubDate>
+        <lastBuildDate>Tue, 26 Mar 2019 12:52:01 +0000</lastBuildDate>
+        <category>web</category>
+        <category>macOS</category>
+        <item>
+            <guid isPermalink="true">https://mapo.io/2019/03/26/website-darkmode-on-macos/</guid>
+            <title>让你的网站支持macOS和IOS的深色模式(测试文章)</title>
+            <link>https://mapo.io/2019/03/26/website-darkmode-on-macos/</link>
+            <category>web</category>
+            <category>macOS</category>
+            <pubDate>Tue, 26 Mar 2019 12:52:01 +0000</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;如果你在使用 macOS 10.14.4 或者之后的系统，在系统内开启深色模式，打开 Safari 浏览器，你会发现我的博客变成了暗黑版本。&lt;/p&gt;
+&lt;p class=&#34;success&#34;&gt;本文发表于2019-03-26，而在2019-06-04凌晨，Apple 发布了 IOS 13，本文所说的方法也同时适用于 IOS Safari&lt;/p&gt;
+
+&lt;p class=&#34;success&#34;&gt;2019-08-08 今天突然发现 Chrome 也支持了&lt;/p&gt;
+
+&lt;p&gt;深色模式（Dark Mode）是 Apple 在 macOS Mojave 上全新推出的一项功能，macOS 内置的 App 能完美支持，凭借着易用的接口，越来越多的第三方 App 已经进行了适配，可大家使用最多的浏览器却没能很好的支持，虽然你可以使用 Safari 的阅读视图浏览深色模式下的页面内容，但体验终归没有网站自身支持的好。&lt;/p&gt;
+&lt;p&gt;原因主要有两个，一是浏览器没有给出让开发者适配的接口，二是网站设计并不统一，强行进入深色模式会破坏页面的设计和内容的可读性。&lt;/p&gt;
+&lt;p&gt;于是经过几次的升级，macOS 终于在 Safari 12.1 中加入了一个新的媒体查询 &lt;code&gt;prefers-color-scheme&lt;/code&gt;，并且 FireFox 67 也开始进行支持，其他浏览器的具体支持情况可在这里查看：&lt;a href=&#34;https://caniuse.com/#search=prefers-color-scheme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://caniuse.com/#search=prefers-color-scheme&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数学公式测试&#34;&gt;&lt;a href=&#34;#数学公式测试&#34; class=&#34;headerlink&#34; title=&#34;数学公式测试&#34;&gt;&lt;/a&gt;数学公式测试&lt;/h2&gt;&lt;p&gt;$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$&lt;/p&gt;
+&lt;pre class=&#34;mermaid&#34;&gt;sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!&lt;/pre&gt;
+
+&lt;h2 id=&#34;简单使用&#34;&gt;&lt;a href=&#34;#简单使用&#34; class=&#34;headerlink&#34; title=&#34;简单使用&#34;&gt;&lt;/a&gt;简单使用&lt;/h2&gt;&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Name:   prefers-color-scheme&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;For:    @media&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Value:  no-preference | light | dark&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;no-preference：无颜色偏好&lt;/li&gt;
+&lt;li&gt;light：浅色模式&lt;/li&gt;
+&lt;li&gt;dark：深色模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;和你是用的其他媒体查询一样，用起来很简单&lt;/p&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;@media&lt;/span&gt; (&lt;span class=&#34;attribute&#34;&gt;prefers-color-scheme:&lt;/span&gt; light) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;/* 浅色模式样式 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;@media&lt;/span&gt; (&lt;span class=&#34;attribute&#34;&gt;prefers-color-scheme:&lt;/span&gt; dark) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;/* 深色模式样式 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;默认都是浅色模式的，所以我们只写深色模式的样式就行&lt;/p&gt;
+&lt;h2 id=&#34;使用CSS变量&#34;&gt;&lt;a href=&#34;#使用CSS变量&#34; class=&#34;headerlink&#34; title=&#34;使用CSS变量&#34;&gt;&lt;/a&gt;使用CSS变量&lt;/h2&gt;&lt;p&gt;现在也页面都会涉及到大量的样式，要适配深色模式，最好使用变量。&lt;/p&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:root&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attribute&#34;&gt;--background-color&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;#FFFFFF&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attribute&#34;&gt;--content-color&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;#15171A&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;@media&lt;/span&gt; (&lt;span class=&#34;attribute&#34;&gt;prefers-color-scheme:&lt;/span&gt; dark) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;selector-pseudo&#34;&gt;:root&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;--background-color&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;#222&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;--content-color&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;#dfdfdf&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.main-page&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;background&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;var&lt;/span&gt;(--background-color);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.full-content&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;color&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;var&lt;/span&gt;(--content-color)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;上面的例子中，只定义了几个颜色相关的样式，事实上你可以跟其他媒体查询一样，定义其他的样式，让你的深色模式有更多不同的布局。&lt;/p&gt;
+&lt;h2 id=&#34;颜色&#34;&gt;&lt;a href=&#34;#颜色&#34; class=&#34;headerlink&#34; title=&#34;颜色&#34;&gt;&lt;/a&gt;颜色&lt;/h2&gt;&lt;p&gt;颜色这个就看自己喜欢了，不过要注意一点，如果你是使用 macOS 内置 App 的配色，强调色会改变一些基础配色，比如强调色不是石墨色的时候，背景颜色会变得比较暖。&lt;/p&gt;
+&lt;p&gt;在设置颜色的时候，要保证内容的可读性，我们需要将文本和背景的颜色对比度保持在一个安全的范围内，这时候你需要用到这个工具： &lt;a href=&#34;https://github.com/leaverou/contrast-ratio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/leaverou/contrast-ratio&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;图片&#34;&gt;&lt;a href=&#34;#图片&#34; class=&#34;headerlink&#34; title=&#34;图片&#34;&gt;&lt;/a&gt;图片&lt;/h2&gt;&lt;p&gt;在写好颜色相关的样式之后，你会发现页面上的图片变得很刺眼，这时你可以降低一下图片的透明度，具体降多少也是看你背景设置的色深，另外可以设置一下鼠标悬停时恢复透明度，这样能有更好的体验。&lt;/p&gt;
+&lt;p&gt;我用的 blazy 懒加载，所以是这样设置的&lt;/p&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;@media&lt;/span&gt; (&lt;span class=&#34;attribute&#34;&gt;prefers-color-scheme:&lt;/span&gt; dark) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;selector-class&#34;&gt;.b-lazy&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.b-loaded&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;opacity&lt;/span&gt;: .&lt;span class=&#34;number&#34;&gt;9&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;transition&lt;/span&gt;: opacity .&lt;span class=&#34;number&#34;&gt;5s&lt;/span&gt; ease-in-out;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;selector-class&#34;&gt;.b-lazy&lt;/span&gt;&lt;span class=&#34;selector-class&#34;&gt;.b-loaded&lt;/span&gt;&lt;span class=&#34;selector-pseudo&#34;&gt;:hover&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;opacity&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;后话&#34;&gt;&lt;a href=&#34;#后话&#34; class=&#34;headerlink&#34; title=&#34;后话&#34;&gt;&lt;/a&gt;后话&lt;/h2&gt;&lt;p&gt;在深色模式推出之后，得到了不错的反响，我认为 IOS 13 会引入一定深色模式。另外，Windows 也有“暗”模式，相信越来越多的应用会进行这样深色模式的适配，在 macOS 10.14.4 升级之后，我在第一时间进行了博客主题更新，只有大家都用了这个新的媒体查询，才会推动其他平台和浏览器的适配，好东西值得推崇。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文章发表于底噪博客 &lt;a href=&#34;https://zhih.me&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://zhih.me&lt;/a&gt; , 转载请注明&lt;br&gt;直接偷的人，你打球真蔡&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

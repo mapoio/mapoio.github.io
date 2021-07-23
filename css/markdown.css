@@ -1,0 +1,248 @@
+code,
+pre {
+    font-family: "Roboto Mono", Monaco, courier, monospace;
+    font-size: 0.9em;
+    background-color: var(--color-1);
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+}
+
+code {
+    color: #e96900;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+
+kbd {
+    margin: 0 4px;
+    padding: 3px 4px;
+    background: #eee;
+    color: #555;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+em {
+    color: #7f8c8d;
+}
+
+.post-markdown-body> :first-child {
+    margin-top: 0;
+}
+
+.post-markdown-body li {
+    margin: .5em 0;
+    padding-left: .3em;
+    line-height: 1.6em;
+}
+
+.post-markdown-body img {
+    max-width: 100%;
+}
+
+.post-markdown-body span.light {
+    color: #7f8c8d;
+}
+
+.post-markdown-body span.info {
+    font-size: 0.85em;
+    display: inline-block;
+    vertical-align: middle;
+    width: 280px;
+    margin-left: 20px;
+}
+
+.post-markdown-body h1 {
+    margin: 0 0 1.2em;
+}
+
+.post-markdown-body h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-bottom: 0.6em;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-markdown-body h3 {
+    line-height: 1.2;
+    position: relative;
+}
+
+.post-markdown-body h3,
+.post-markdown-body h4,
+.post-markdown-body h5,
+.post-markdown-body strong {
+    margin-bottom: 1em;
+    font-weight: 600;
+    color: var(--color-2);
+    margin-top: 1.5em
+}
+
+.post-markdown-body figure {
+    margin-bottom: 1.2em;
+}
+
+.post-markdown-body p {
+    line-height: 1.6em;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+.post-markdown-body ul,
+.post-markdown-body ol {
+    padding-left: 1.5em;
+    position: inherit;
+}
+
+.post-markdown-body ul ul,
+.post-markdown-body ol ul,
+.post-markdown-body ul ol,
+.post-markdown-body ol ol {
+    margin: 0;
+}
+
+.post-markdown-body a {
+    color: #26A8ED;
+    font-weight: 600;
+}
+
+.post-markdown-body a.button {
+    font-size: 0.9em;
+    color: #fff;
+    margin: 0.2em 0;
+    width: 180px;
+    text-align: center;
+    padding: 12px 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post-markdown-body h2 a,
+.post-markdown-body h3 a,
+.post-markdown-body h2 button,
+.post-markdown-body h3 button {
+    pointer-events: auto;
+    color: #2c3e50;
+}
+
+.post-markdown-body blockquote {
+    margin: 2em 0;
+    padding: 20px 0 20px 20px;
+    border-left: 4px solid #26A8ED;
+}
+
+.post-markdown-body blockquote p {
+    font-weight: 600;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.post-markdown-body iframe {
+    margin: 1em 0;
+}
+
+.post-markdown-body>table {
+    word-break: keep-all;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 1.2em auto;
+    padding: 0;
+    display: block;
+    overflow-x: auto;
+}
+
+.post-markdown-body>table td,
+.post-markdown-body>table th {
+    line-height: 1.5em;
+    padding: 0.4em 0.8em;
+    border: none;
+    border: 1px solid #ddd;
+}
+
+.post-markdown-body>table th {
+    font-weight: bold;
+    text-align: left;
+}
+
+.post-markdown-body>table th,
+.post-markdown-body>table tr:nth-child(2n) {
+    background-color: var(--color-1);
+}
+
+.post-markdown-body>table th code,
+.post-markdown-body>table tr:nth-child(2n) code {
+    background-color: #efefef;
+}
+
+.post-markdown-body p.error,
+.post-markdown-body p.warn,
+.post-markdown-body p.success {
+    padding: 12px 24px 12px 30px;
+    margin: 2em 0;
+    border-left-width: 4px;
+    border-left-style: solid;
+    background-color: var(--color-1);
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.post-markdown-body p.error:before,
+.post-markdown-body p.warn:before,
+.post-markdown-body p.success:before {
+    position: absolute;
+    top: 14px;
+    left: -12px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+}
+
+.post-markdown-body p.error code,
+.post-markdown-body p.warn code,
+.post-markdown-body p.success code {
+    background-color: #efefef;
+}
+
+.post-markdown-body p.error em,
+.post-markdown-body p.warn em,
+.post-markdown-body p.success em {
+    color: #34495e;
+}
+
+.post-markdown-body p.error {
+    border-left-color: #f66;
+}
+
+.post-markdown-body p.error:before {
+    content: "\2717";
+    background-color: #f66;
+}
+
+.post-markdown-body p.warn {
+    border-left-color: #ff9900;
+}
+
+.post-markdown-body p.warn:before {
+    content: "!";
+    background-color: #ff9900;
+}
+
+.post-markdown-body p.success {
+    border-left-color: #42b983;
+}
+
+.post-markdown-body p.success:before {
+    content: "\2713";
+    background-color: #42b983;
+}
