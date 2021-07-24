@@ -139,9 +139,9 @@ hexo.extend.helper.register('cdn_css', function(...args) {
 
 	let prefix = ''
 	const cdn = hexo.config.cdn
-	if (isProd) {
-		prefix = cdn.enable ? `${cdn.url}@${getVersion()}` : ''
-	}
+	// if (isProd) {
+	// 	prefix = cdn.enable ? `${cdn.url}@${getVersion()}` : ''
+	// }
   
 	flatten(args).forEach(item => {
 	  // Old syntax
@@ -167,9 +167,9 @@ hexo.extend.helper.register('cdn_js', function(...args) {
   
 	let prefix = ''
 	const cdn = hexo.config.cdn
-	if (isProd) {
-		prefix = cdn.enable ? `${cdn.url}@${getVersion()}` : ''
-	}
+	// if (isProd) {
+	// 	prefix = cdn.enable ? `${cdn.url}@${getVersion()}` : ''
+	// }
 
 	flatten(args).forEach(item => {
 		// Old syntax
