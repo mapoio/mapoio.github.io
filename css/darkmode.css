@@ -140,19 +140,19 @@
     }
 
     .gt-header-comment textarea {
-        background-color: #f6f6f60d
+        background-color: #f6f6f60d !important
     }
 
     .gt-header-comment textarea:after {
-        background-color: #f6f6f61e
+        background-color: #f6f6f61e !important
     }
 
     .gt-container .gt-btn-preview {
         background-color: #ffffff08;
     }
 
-    .gt-container .gt-btn-preview:after {
-        background-color: #ffffff11;
+    .gt-container .gt-btn-preview:hover {
+        background-color: #ffffff11 !important;
     }
 
 }
