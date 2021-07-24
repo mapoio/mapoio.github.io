@@ -74,16 +74,15 @@
     <link rel="alternate" type="application/json" title="{{ config.title }}" href="{{ url_for('/feed.json') }}" />
 	{% endif %}
 
+	{% if is_post() and theme.gitalk.active %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitalk/gitalk/dist/gitalk.css">
+	{% endif %}
+	
 	{{ cdn_css('css/screen') }}
 	{{ cdn_css('css/style') }}
 	{{ cdn_css('css/markdown') }}
 	{{ cdn_css('css/highlight') }}
 	{{ cdn_css('css/darkmode') }}
-
-	{% if is_post() and theme.gitalk.active %}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitalk/gitalk/dist/gitalk.css">
-	{% endif %}
-	
 
 	{% if theme.googleAnalytics %}
 	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>

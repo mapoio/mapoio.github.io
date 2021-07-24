@@ -139,4 +139,20 @@
         background: rgba(50, 51, 54, .9)!important
     }
 
+    .gt-header-comment textarea {
+        background-color: #f6f6f60d
+    }
+
+    .gt-header-comment textarea:after {
+        background-color: #f6f6f61e
+    }
+
+    .gt-container .gt-btn-preview {
+        background-color: #ffffff08;
+    }
+
+    .gt-container .gt-btn-preview:after {
+        background-color: #ffffff11;
+    }
+
 }
