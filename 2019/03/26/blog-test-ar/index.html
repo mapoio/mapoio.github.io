@@ -8,16 +8,16 @@
 	<link rel="preconnect" href="//cdn.jsdelivr.net">
 	<link rel="preconnect" href="//unpkg.com">
 
-	<title>让你的网站支持macOS和IOS的深色模式(测试文章) | 麻婆酱</title>
+	<title>博客支持功能 | 麻婆酱</title>
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	<meta name="generator" content="hexo">
 	<meta name="author" content="Mapo">
-	<meta name="description" content="macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可">
+	<meta name="description" content="目前博客支持功能预览，现在都看不懂了">
 
 	
-	<meta name="keywords" content="深色模式, Dark Mode, macOS Mojave, prefers-color-scheme, CSS, 暗黑主题">
+	<meta name="keywords" content="深色模式, 博客功能, 预览效果">
 	
 
 	
@@ -38,14 +38,14 @@
 
 	<meta property="og:site_name" content="麻婆酱">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="让你的网站支持macOS和IOS的深色模式(测试文章) | 麻婆酱">
-	<meta property="og:description" content="macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可">
-	<meta property="og:url" content="https://mapo.io/2019/03/26/website-darkmode-on-macos/">
+	<meta property="og:title" content="博客支持功能 | 麻婆酱">
+	<meta property="og:description" content="目前博客支持功能预览，现在都看不懂了">
+	<meta property="og:url" content="https://mapo.io/2019/03/26/blog-test-ar/">
 
 	
 	<meta property="article:published_time" content="2019-03-26T12:03:00+08:00"> 
 	<meta property="article:author" content="Mapo">
-	<meta property="article:published_first" content="麻婆酱, /2019/03/26/website-darkmode-on-macos/">
+	<meta property="article:published_first" content="麻婆酱, /2019/03/26/blog-test-ar/">
 	<link rel="alternate" type="application/rss+xml" title="麻婆酱" href="/rss.xml">
     <link rel="alternate" type="application/atom+xml" title="麻婆酱" href="/atom.xml">
     <link rel="alternate" type="application/json" title="麻婆酱" href="/feed.json">
@@ -120,7 +120,7 @@
             
         </ul>
         
-            <span class="nav-post-title">让你的网站支持macOS和IOS的深色模式(测试文章)</span>
+            <span class="nav-post-title">博客支持功能</span>
         
         </div>
     </div>
@@ -163,9 +163,9 @@
                 
                 
             </div>
-            <h1 class="post-full-title">让你的网站支持macOS和IOS的深色模式(测试文章)</h1>
+            <h1 class="post-full-title">博客支持功能</h1>
             
-            <p class="post-full-custom-excerpt">macOS Mojave 深色模式现已支持网页，本博客第一时间进行了适配，使用方式很简单，只需要一个媒体查询即可</p>
+            <p class="post-full-custom-excerpt">目前博客支持功能预览，现在都看不懂了</p>
             
         </header>
 
@@ -176,23 +176,21 @@
                         /images/app.png 1000w,
                         /images/app.png 2000w" sizes="(max-width: 800px) 400px,
                     (max-width: 1170px) 1170px,
-                        2000px" src="/images/app.png" alt="让你的网站支持macOS和IOS的深色模式(测试文章)">
+                        2000px" src="/images/app.png" alt="博客支持功能">
         </figure>
         
         <div class="post-full no-image">
             
             <div class="post-full-content">
                 <article id="photoswipe" class="post-markdown-body">
-                    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果你在使用 macOS 10.14.4 或者之后的系统，在系统内开启深色模式，打开 Safari 浏览器，你会发现我的博客变成了暗黑版本。</p>
-<p class="success">本文发表于2019-03-26，而在2019-06-04凌晨，Apple 发布了 IOS 13，本文所说的方法也同时适用于 IOS Safari</p>
+                    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>实验</p>
+<p class="success">状态提示消息 - Success</p>
+<p class="warn">警告提示消息 - Warn</p>
+<p class="error">错误提示消息 - Error</p>
 
-<p class="success">2019-08-08 今天突然发现 Chrome 也支持了</p>
-
-<p>深色模式（Dark Mode）是 Apple 在 macOS Mojave 上全新推出的一项功能，macOS 内置的 App 能完美支持，凭借着易用的接口，越来越多的第三方 App 已经进行了适配，可大家使用最多的浏览器却没能很好的支持，虽然你可以使用 Safari 的阅读视图浏览深色模式下的页面内容，但体验终归没有网站自身支持的好。</p>
-<p>原因主要有两个，一是浏览器没有给出让开发者适配的接口，二是网站设计并不统一，强行进入深色模式会破坏页面的设计和内容的可读性。</p>
-<p>于是经过几次的升级，macOS 终于在 Safari 12.1 中加入了一个新的媒体查询 <code>prefers-color-scheme</code>，并且 FireFox 67 也开始进行支持，其他浏览器的具体支持情况可在这里查看：<a href="https://caniuse.com/#search=prefers-color-scheme" target="_blank" rel="noopener">https://caniuse.com/#search=prefers-color-scheme</a></p>
+<p>支持深色模式，MacOS 下会自动变色</p>
 <h2 id="数学公式测试"><a href="#数学公式测试" class="headerlink" title="数学公式测试"></a>数学公式测试</h2><p>$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$</p>
-<pre class="mermaid">sequenceDiagram
+<h2 id="mermaid测试"><a href="#mermaid测试" class="headerlink" title="mermaid测试"></a>mermaid测试</h2><pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
     Alice->>John: Hello John, how are you?
@@ -204,31 +202,7 @@
     John->>Bob: How about you?
     Bob-->>John: Jolly good!</pre>
 
-<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Name:   prefers-color-scheme</span><br><span class="line">For:    @media</span><br><span class="line">Value:  no-preference | light | dark</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>no-preference：无颜色偏好</li>
-<li>light：浅色模式</li>
-<li>dark：深色模式</li>
-</ul>
-<p>和你是用的其他媒体查询一样，用起来很简单</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> light) {</span><br><span class="line">    <span class="comment">/* 浅色模式样式 */</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) {</span><br><span class="line">    <span class="comment">/* 深色模式样式 */</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>默认都是浅色模式的，所以我们只写深色模式的样式就行</p>
-<h2 id="使用CSS变量"><a href="#使用CSS变量" class="headerlink" title="使用CSS变量"></a>使用CSS变量</h2><p>现在也页面都会涉及到大量的样式，要适配深色模式，最好使用变量。</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> {</span><br><span class="line">  <span class="attribute">--background-color</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">--content-color</span>: <span class="number">#15171A</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) {</span><br><span class="line">  <span class="selector-pseudo">:root</span> {</span><br><span class="line">    <span class="attribute">--background-color</span>: <span class="number">#222</span>;</span><br><span class="line">    <span class="attribute">--content-color</span>: <span class="number">#dfdfdf</span>;</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main-page</span> {</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">var</span>(--background-color);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.full-content</span> {</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">var</span>(--content-color)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>上面的例子中，只定义了几个颜色相关的样式，事实上你可以跟其他媒体查询一样，定义其他的样式，让你的深色模式有更多不同的布局。</p>
-<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>颜色这个就看自己喜欢了，不过要注意一点，如果你是使用 macOS 内置 App 的配色，强调色会改变一些基础配色，比如强调色不是石墨色的时候，背景颜色会变得比较暖。</p>
-<p>在设置颜色的时候，要保证内容的可读性，我们需要将文本和背景的颜色对比度保持在一个安全的范围内，这时候你需要用到这个工具： <a href="https://github.com/leaverou/contrast-ratio" target="_blank" rel="noopener">https://github.com/leaverou/contrast-ratio</a></p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>在写好颜色相关的样式之后，你会发现页面上的图片变得很刺眼，这时你可以降低一下图片的透明度，具体降多少也是看你背景设置的色深，另外可以设置一下鼠标悬停时恢复透明度，这样能有更好的体验。</p>
-<p>我用的 blazy 懒加载，所以是这样设置的</p>
-<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-color-scheme:</span> dark) {</span><br><span class="line">    <span class="selector-class">.b-lazy</span><span class="selector-class">.b-loaded</span> {</span><br><span class="line">        <span class="attribute">opacity</span>: .<span class="number">9</span>;</span><br><span class="line">        <span class="attribute">transition</span>: opacity .<span class="number">5s</span> ease-in-out;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="selector-class">.b-lazy</span><span class="selector-class">.b-loaded</span><span class="selector-pseudo">:hover</span> {</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h2><p>在深色模式推出之后，得到了不错的反响，我认为 IOS 13 会引入一定深色模式。另外，Windows 也有“暗”模式，相信越来越多的应用会进行这样深色模式的适配，在 macOS 10.14.4 升级之后，我在第一时间进行了博客主题更新，只有大家都用了这个新的媒体查询，才会推动其他平台和浏览器的适配，好东西值得推崇。</p>
-<blockquote>
-<p>本文章发表于底噪博客 <a href="https://zhih.me" target="_blank" rel="noopener">https://zhih.me</a> , 转载请注明<br>直接偷的人，你打球真蔡</p>
-</blockquote>
+<h2 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h2><figure class="highlight golang"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *raftNodePersister)</span> <span class="title">ReadByBytes</span><span class="params">(b []<span class="keyword">byte</span>)</span> <span class="title">error</span></span> {</span><br><span class="line">	<span class="keyword">if</span> err := gob.NewDecoder(bytes.NewBuffer(b)).Decode(r); err != <span class="literal">nil</span> {</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *raftNodePersister)</span> <span class="title">WriteByBytes</span><span class="params">()</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> {</span><br><span class="line">	<span class="keyword">var</span> buf bytes.Buffer</span><br><span class="line">	<span class="keyword">if</span> err := gob.NewEncoder(&buf).Encode(r); err != <span class="literal">nil</span> {</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> buf.Bytes(), <span class="literal">nil</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
                 </article>
                 <ul class="tags-postTags">
@@ -267,7 +241,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式测试"><span class="toc-text">数学公式测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单使用"><span class="toc-text">简单使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用CSS变量"><span class="toc-text">使用CSS变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后话"><span class="toc-text">后话</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式测试"><span class="toc-text">数学公式测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mermaid测试"><span class="toc-text">mermaid测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码测试"><span class="toc-text">代码测试</span></a></li></ol>
     </div>
 </div>
 
@@ -363,10 +337,10 @@
                         
                         
                         <li>
-                            <h4><a href="/2019/03/26/website-darkmode-on-macos/">让你的网站支持macOS和IOS的深色模式(测试文章)</a></h4>
+                            <h4><a href="/2019/03/26/blog-test-ar/">博客支持功能</a></h4>
                             <div class="read-next-card-meta">
                                 <p><time datetime="2019-03-26">26 3月 2019</time> –
-                                    5min read</p>
+                                    2min read</p>
                             </div>
                         </li>
                         
