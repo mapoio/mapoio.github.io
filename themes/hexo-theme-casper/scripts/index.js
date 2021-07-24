@@ -192,9 +192,9 @@ hexo.extend.helper.register('cdn_js', function(...args) {
 hexo.extend.helper.register('cdn_img', function(path) {
 	let result = '';
 	const cdn = hexo.config.cdn
-	if (isProd) {
-		result = cdn.enable ? `${cdn.url}@${getVersion()}` : ''
-	}
+	// if (isProd) {
+	// 	result = cdn.enable ? `${cdn.url}@${getVersion()}` : ''
+	// }
 	if (typeof path === 'string' || path instanceof String) {
 		if (path.includes('http')) {
 			return path
