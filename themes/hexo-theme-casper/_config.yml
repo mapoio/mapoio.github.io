@@ -40,7 +40,7 @@ widgets:
   category: true
   tagcloud: true
   # This is a simple theme, I think 3 is enough.
-
+skip_render: [404.html]
 # Post page fload header
 floadheader: false
 
