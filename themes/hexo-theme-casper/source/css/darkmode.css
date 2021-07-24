@@ -152,16 +152,21 @@
         background-color: #f6f9fe1a;
     }
 
-    .gt-container .gt-comment-body {
+    .gt-container .gt-comment-body, .gt-container .gt-header-preview {
         color: #ffffffad !important;
     }
 
     .gt-container .gt-comment-content:hover {
         -webkit-box-shadow: 0 0.625em 3.75em 0 #f4f4f42f;
                 box-shadow: 0 0.625em 3.75em 0 #f4f4f41e;
-      }
+    }
 
-    .gt-container .gt-btn-preview {
+    .gt-container .gt-popup {
+        background: #1b1919;
+        border: 1px solid #2d2d2d;
+    }
+
+    .gt-container .gt-btn-preview, .gt-container .gt-header-preview  {
         background-color: #ffffff08;
     }
 
