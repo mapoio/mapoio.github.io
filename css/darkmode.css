@@ -140,12 +140,26 @@
     }
 
     .gt-header-comment textarea {
-        background-color: #f6f6f60d !important
+        background-color: #f6f6f60d !important;
+        color: #ffffffad;
     }
 
     .gt-header-comment textarea:after {
-        background-color: #f6f6f61e !important
+        background-color: #f6f6f61e !important;
     }
+
+    .gt-container .gt-comment-admin .gt-comment-content {
+        background-color: #f6f9fe1a;
+    }
+
+    .gt-container .gt-comment-body {
+        color: #ffffffad !important;
+    }
+
+    .gt-container .gt-comment-content:hover {
+        -webkit-box-shadow: 0 0.625em 3.75em 0 #f4f4f42f;
+                box-shadow: 0 0.625em 3.75em 0 #f4f4f41e;
+      }
 
     .gt-container .gt-btn-preview {
         background-color: #ffffff08;
