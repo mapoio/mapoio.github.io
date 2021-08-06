@@ -3,17 +3,5 @@
     "title": "麻婆酱",
     "description": "种一棵树的最好时间是十年前，其次是现在",
     "home_page_url": "https://www.mapo.io",
-    "items": [
-        {
-            "id": "https://www.mapo.io/2019/03/26/blog-test-ar/",
-            "url": "https://www.mapo.io/2019/03/26/blog-test-ar/",
-            "title": "博客支持功能",
-            "date_published": "2019-03-26T12:52:01.000Z",
-            "content_html": "<h2 id=\"前言\"><a href=\"#前言\" class=\"headerlink\" title=\"前言\"></a>前言</h2><p>实验</p>\n<p class=\"success\">状态提示消息 - Success</p>\n<p class=\"warn\">警告提示消息 - Warn</p>\n<p class=\"error\">错误提示消息 - Error</p>\n\n<p>支持深色模式，MacOS 下会自动变色</p>\n<h2 id=\"数学公式测试\"><a href=\"#数学公式测试\" class=\"headerlink\" title=\"数学公式测试\"></a>数学公式测试</h2><p>$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$</p>\n<h2 id=\"mermaid测试\"><a href=\"#mermaid测试\" class=\"headerlink\" title=\"mermaid测试\"></a>mermaid测试</h2><pre class=\"mermaid\">sequenceDiagram\n    participant Alice\n    participant Bob\n    Alice->>John: Hello John, how are you?\n    loop Healthcheck\n        John->>John: Fight against hypochondria\n    end\n    Note right of John: Rational thoughts <br/>prevail...\n    John-->>Alice: Great!\n    John->>Bob: How about you?\n    Bob-->>John: Jolly good!</pre>\n\n<h2 id=\"代码测试\"><a href=\"#代码测试\" class=\"headerlink\" title=\"代码测试\"></a>代码测试</h2><figure class=\"highlight golang\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"function\"><span class=\"keyword\">func</span> <span class=\"params\">(r *raftNodePersister)</span> <span class=\"title\">ReadByBytes</span><span class=\"params\">(b []<span class=\"keyword\">byte</span>)</span> <span class=\"title\">error</span></span> &#123;</span><br><span class=\"line\">\t<span class=\"keyword\">if</span> err := gob.NewDecoder(bytes.NewBuffer(b)).Decode(r); err != <span class=\"literal\">nil</span> &#123;</span><br><span class=\"line\">\t\t<span class=\"keyword\">return</span> err</span><br><span class=\"line\">\t&#125;</span><br><span class=\"line\">\t<span class=\"keyword\">return</span> <span class=\"literal\">nil</span></span><br><span class=\"line\">&#125;</span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"function\"><span class=\"keyword\">func</span> <span class=\"params\">(r *raftNodePersister)</span> <span class=\"title\">WriteByBytes</span><span class=\"params\">()</span> <span class=\"params\">([]<span class=\"keyword\">byte</span>, error)</span></span> &#123;</span><br><span class=\"line\">\t<span class=\"keyword\">var</span> buf bytes.Buffer</span><br><span class=\"line\">\t<span class=\"keyword\">if</span> err := gob.NewEncoder(&amp;buf).Encode(r); err != <span class=\"literal\">nil</span> &#123;</span><br><span class=\"line\">\t\t<span class=\"keyword\">return</span> <span class=\"literal\">nil</span>, err</span><br><span class=\"line\">\t&#125;</span><br><span class=\"line\">\t<span class=\"keyword\">return</span> buf.Bytes(), <span class=\"literal\">nil</span></span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure>\n",
-            "tags": [
-                "web",
-                "macOS"
-            ]
-        }
-    ]
+    "items": []
 }
