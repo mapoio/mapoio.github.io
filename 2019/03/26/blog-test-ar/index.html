@@ -505,11 +505,11 @@
 
 
 
-<script id="mermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid@8.5.1/dist/mermaid.min.js" async></script>
+<script id="mermaidScript" src="https://cdn.jsdelivr.net/npm/mermaid@8.11.4/dist/mermaid.min.js" async></script>
 <script>
     document.getElementById('mermaidScript').addEventListener('load',function(){
         if (window.mermaid) {
-            mermaid.initialize({"theme":"default"});
+            mermaid.initialize({"theme":"default","themeCSS":"@media(prefers-color-scheme:dark){.error-icon{fill:#a44141}.error-text{fill:#ddd;stroke:#ddd}.edge-thickness-normal{stroke-width:2px}.edge-thickness-thick{stroke-width:3.5px}.edge-pattern-solid{stroke-dasharray:0}.edge-pattern-dashed{stroke-dasharray:3}.edge-pattern-dotted{stroke-dasharray:2}.marker{fill:lightgrey;stroke:lightgrey}.marker.cross{stroke:lightgrey}svg{font-family:\"trebuchet ms\",verdana,arial,sans-serif;font-size:16px}.actor{stroke:#81b1db;fill:#1f2020}text.actor>tspan{fill:lightgrey;stroke:none}.actor-line{stroke:lightgrey}.messageLine0{stroke-width:1.5;stroke-dasharray:none;stroke:lightgrey}.messageLine1{stroke-width:1.5;stroke-dasharray:2,2;stroke:lightgrey}#arrowhead path{fill:lightgrey;stroke:lightgrey}.sequenceNumber{fill:black}#sequencenumber{fill:lightgrey}#crosshead path{fill:lightgrey;stroke:lightgrey}.messageText{fill:lightgrey;stroke:lightgrey}.labelBox{stroke:#81b1db;fill:#1f2020}.labelText,.labelText>tspan{fill:lightgrey;stroke:none}.loopText,.loopText>tspan{fill:lightgrey;stroke:none}.loopLine{stroke-width:2px;stroke-dasharray:2,2;stroke:#81b1db;fill:#81b1db}.note{stroke:hsl(180,0%,18.3529411765%);fill:hsl(180,1.5873015873%,28.3529411765%)}.noteText,.noteText>tspan{fill:rgb(183.8476190475,181.5523809523,181.5523809523);stroke:none}.activation0{fill:hsl(180,1.5873015873%,28.3529411765%);stroke:#81b1db}.activation1{fill:hsl(180,1.5873015873%,28.3529411765%);stroke:#81b1db}.activation2{fill:hsl(180,1.5873015873%,28.3529411765%);stroke:#81b1db}}"});
         }
     });
 </script>
