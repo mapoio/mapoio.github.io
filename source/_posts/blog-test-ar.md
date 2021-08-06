@@ -5,16 +5,16 @@ date: 2019-03-26 12:52:01
 tags: 
 - web
 - macOS
-categories: WEB, 测试
+categories: 测试
 mathjax: true
-description: 目前博客支持功能预览，现在都看不懂了
+description: 目前博客支持功能预览，暗黑模式
 keywords: 深色模式, 博客功能, 预览效果
 mermaid: true
 ---
 
 ## 前言
 
-实验
+实验，全部支持暗黑主题^[包括图表也是支持的。]。
 
 <p class="success">状态提示消息 - Success</p>
 <p class="warn">警告提示消息 - Warn</p>
