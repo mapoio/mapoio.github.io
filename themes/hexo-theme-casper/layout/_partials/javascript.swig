@@ -200,5 +200,5 @@
         }
     });
 </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-svg.js"></script>
 <% } %>
