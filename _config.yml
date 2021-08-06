@@ -132,6 +132,7 @@ markdown:
     - markdown-it-ins
     - markdown-it-sub
     - markdown-it-sup
+    - markdown-it-mathjax
   # 锚点设置（因为我没有尝试相关内容，所以就不翻译相关说明了）
   anchors:
     level: 2
@@ -158,11 +159,11 @@ feed:
         template: 'themes/hexo-theme-casper/layout/_alternate/json.ejs'
         output: 'feed.json'
 
-math:
-  engine: 'mathjax'
-  mathjax: 
-    src: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-  per_page: false
+# math:
+#   engine: 'mathjax'
+#   mathjax: 
+#     src: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+#   per_page: false
 
 flowchart:
   raphael:   https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js

@@ -6,7 +6,7 @@ tags:
 - web
 - macOS
 categories: 测试
-mathjax: true
+math: true
 description: 目前博客支持功能预览，暗黑模式
 keywords: 深色模式, 博客功能, 预览效果
 mermaid: true
