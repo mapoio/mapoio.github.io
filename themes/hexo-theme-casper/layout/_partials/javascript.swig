@@ -184,7 +184,7 @@
 </script>
 {% endif %}
 
-<% if (page.math) { %>
+{% if page.math %}
 <script type="text/x-mathjax-config">
    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
         tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
@@ -201,4 +201,4 @@
     });
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-svg.js"></script>
-<% } %>
+{% endif %}
