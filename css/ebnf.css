@@ -15,23 +15,25 @@
     --ebnfBaseColor: #777;
 }
 
-.theme-dark {
+@media (prefers-color-scheme: dark) {
+   :root{
+      --ebnfDiagramBackground: #222;
+      --ebnfDiagramLines: #3e432e;
+      --ebnfDiagramText: #a7d129;
+      --ebnfTerminalLines: #a7d129;
+      --ebnfTerminalFill: #3e432e;
+      --ebnfNonTerminalLines: #a7d129;
+      --ebnfNonTerminalFill: #3e432e;
+      --ebnfSpecialSequenceLines: #a7d129;
+      --ebnfSpecialSequenceFill: #444;
 
-    --ebnfDiagramBackground: #222;
-    --ebnfDiagramLines: #3e432e;
-    --ebnfDiagramText: #a7d129;
-    --ebnfTerminalLines: #a7d129;
-    --ebnfTerminalFill: #3e432e;
-    --ebnfNonTerminalLines: #a7d129;
-    --ebnfNonTerminalFill: #3e432e;
-    --ebnfSpecialSequenceLines: #a7d129;
-    --ebnfSpecialSequenceFill: #444;
-
-    --ebnfCodeBackground: #3e432e;
-    --ebnfIdentifier: lightblue;
-    --ebnfTerminal: #a7d129;
-    --ebnfBaseColor: #ddd;
+      --ebnfCodeBackground: #3e432e;
+      --ebnfIdentifier: lightblue;
+      --ebnfTerminal: #a7d129;
+      --ebnfBaseColor: #ddd;
+  }
 }
+
 
 .diagram-container {
   background-color: #f8f8f800;
