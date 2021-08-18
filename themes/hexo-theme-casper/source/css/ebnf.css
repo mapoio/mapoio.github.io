@@ -1,0 +1,100 @@
+:root {
+    --ebnfDiagramBackground: #f8f8f8;
+    --ebnfDiagramLines: black;
+    --ebnfDiagramText: black;
+    --ebnfTerminalLines: black;
+    --ebnfTerminalFill: #feffdf;
+    --ebnfNonTerminalLines: black;
+    --ebnfNonTerminalFill: #feffdf;
+    --ebnfSpecialSequenceLines: black;
+    --ebnfSpecialSequenceFill: #ffe79a;
+
+    --ebnfCodeBackground: #e8e8e8;
+    --ebnfIdentifier: #ef5a5a;
+    --ebnfTerminal: #ffa952;
+    --ebnfBaseColor: #777;
+}
+
+.theme-dark {
+
+    --ebnfDiagramBackground: #222;
+    --ebnfDiagramLines: #3e432e;
+    --ebnfDiagramText: #a7d129;
+    --ebnfTerminalLines: #a7d129;
+    --ebnfTerminalFill: #3e432e;
+    --ebnfNonTerminalLines: #a7d129;
+    --ebnfNonTerminalFill: #3e432e;
+    --ebnfSpecialSequenceLines: #a7d129;
+    --ebnfSpecialSequenceFill: #444;
+
+    --ebnfCodeBackground: #3e432e;
+    --ebnfIdentifier: lightblue;
+    --ebnfTerminal: #a7d129;
+    --ebnfBaseColor: #ddd;
+}
+
+.diagram-container {
+  background-color: #f8f8f800;
+}
+
+/* EBNF diagram representation styling */
+.diagram-container svg.railroad-diagram {
+  width: 100%;
+}
+.diagram-container svg.railroad-diagram path {
+  stroke-width: 3;
+  stroke: var(--ebnfDiagramLines);
+  fill: rgba(0,0,0,0);
+}
+.diagram-container svg.railroad-diagram text {
+  font: bold 14px monospace;
+  text-anchor: middle;
+  fill: var(--ebnfDiagramText);
+}
+.diagram-container svg.railroad-diagram text.diagram-text {
+  font-size: 12px;
+}
+.diagram-container svg.railroad-diagram text.diagram-arrow {
+  font-size: 16px;
+}
+.diagram-container svg.railroad-diagram text.label {
+  text-anchor: start;
+}
+.diagram-container svg.railroad-diagram text.comment {
+  font: italic 12px monospace;
+}
+.diagram-container svg.railroad-diagram g.non-terminal text {
+  /*font-style: italic;*/
+}
+.diagram-container svg.railroad-diagram g.special-sequence rect {
+  fill: var(--ebnfSpecialSequenceFill);
+  stroke: var(--ebnfSpecialSequenceLines);
+}
+.diagram-container svg.railroad-diagram g.special-sequence text {
+  font-style: italic;
+}
+.diagram-container svg.railroad-diagram rect {
+  stroke-width: 3;
+}
+.diagram-container svg.railroad-diagram rect.group-box {
+  stroke: gray;
+  stroke-dasharray: 10 5;
+  fill: none;
+}
+.diagram-container svg.railroad-diagram g.non-terminal rect {
+  fill: var(--ebnfNonTerminalFill);
+  stroke: var(--ebnfNonTerminalLines);
+}
+.diagram-container svg.railroad-diagram g.terminal rect {
+  fill: var(--ebnfTerminalFill);
+  stroke: var(--ebnfTerminalLines);
+}
+.diagram-container svg.railroad-diagram path.diagram-text {
+  stroke-width: 3;
+  stroke: black;
+  fill: white;
+  cursor: help;
+}
+.diagram-container svg.railroad-diagram g.diagram-text:hover path.diagram-text {
+  fill: #eee;
+}

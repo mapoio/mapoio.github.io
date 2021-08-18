@@ -83,6 +83,9 @@
 	{{ cdn_css('css/markdown') }}
 	{{ cdn_css('css/highlight') }}
 	{{ cdn_css('css/darkmode') }}
+	{% if page.ebnf %}
+	{{ cdn_css('css/ebnf') }}
+	{% endif %}
 
 	{% if theme.googleAnalytics %}
 	<script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.GA_TRACKING_ID }}"></script>

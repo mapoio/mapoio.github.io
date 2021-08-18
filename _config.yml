@@ -139,7 +139,7 @@ markdown:
     collisionSuffix: 'v'
     permalink: true
     permalinkClass: header-anchor
-    permalinkSymbol: ¶
+    permalinkSymbol: ''
 
 feed:
     limit: 20

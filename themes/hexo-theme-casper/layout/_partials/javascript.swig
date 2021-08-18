@@ -202,3 +202,12 @@
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-svg.js"></script>
 {% endif %}
+
+{% if page.ebnf %}
+{{ cdn_js('js/ebnf') }}
+<script>
+    document.querySelectorAll(".diagram-container").forEach(item => {
+        item.innerHTML = EBNF(item.textContent);
+    });
+</script>
+{% endif %}
