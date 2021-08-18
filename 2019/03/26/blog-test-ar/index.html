@@ -70,6 +70,11 @@
 	
 <link rel="stylesheet" href="/css/darkmode.css">
 
+	
+	
+<link rel="stylesheet" href="/css/ebnf.css">
+
+	
 
 	
 	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-137551468-1"></script>
@@ -182,15 +187,15 @@
             
             <div class="post-full-content">
                 <article id="photoswipe" class="post-markdown-body">
-                    <h2 id="前言"><a class="header-anchor" href="#前言">¶</a>前言</h2>
+                    <h2 id="前言"><a class="header-anchor" href="#前言"></a>前言</h2>
 <p>实验，全部支持暗黑主题<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。</p>
 <p class="success">状态提示消息 - Success</p>
 <p class="warn">警告提示消息 - Warn</p>
 <p class="error">错误提示消息 - Error</p>
 <p>支持深色模式，MacOS 下会自动变色</p>
-<h2 id="数学公式测试"><a class="header-anchor" href="#数学公式测试">¶</a>数学公式测试</h2>
+<h2 id="数学公式测试"><a class="header-anchor" href="#数学公式测试"></a>数学公式测试</h2>
 <p>$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$</p>
-<h2 id="mermaid测试"><a class="header-anchor" href="#mermaid测试">¶</a>mermaid测试</h2>
+<h2 id="mermaid测试"><a class="header-anchor" href="#mermaid测试"></a>mermaid测试</h2>
 <pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
@@ -202,7 +207,45 @@
     John--&gt;&gt;Alice: Great!
     John-&gt;&gt;Bob: How about you?
     Bob--&gt;&gt;John: Jolly good!</pre>
-<h2 id="代码测试"><a class="header-anchor" href="#代码测试">¶</a>代码测试</h2>
+<h2 id="EBNF测试"><a class="header-anchor" href="#EBNF测试"></a>EBNF测试</h2>
+<pre class="diagram-container">grammar = { rule } ;
+rule = lhs , "=" , rhs , ";" ;
+lhs = identifier ;
+rhs = identifier
+     | terminal
+     | "[" , rhs , "]"
+     | "{" , rhs , "}"
+     | "(" , rhs , ")"
+     | rhs , "|" , rhs
+     | rhs , "a"
+     | rhs , "," , rhs ;
+identifier = letter , { letter | digit | "_" } ;
+terminal = "'" , character , { character } , "'"
+         | '"' , character , { character } , '"' ;
+character = letter | digit | symbol | "_" ;
+letter = "A" | "B" | "C" | "D" | "E" | "F" | "G"
+       | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+       | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+       | "V" | "W" | "X" | "Y" | "Z" | "a" | "b"
+       | "c" | "d" | "e" | "f" | "g" | "h" | "i"
+       | "j" | "k" | "l" | "m" | "n" | "o" | "p"
+       | "q" | "r" | "s" | "t" | "u" | "v" | "w"
+       | "x" | "y" | "z" ;
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+symbol = "[" | "]" | "{" | "}" | "(" | ")" | "&lt;" | "&gt;"
+       | "'" | '"' | "=" | "|" | "." | "," | ";" ;</pre>
+<pre class="diagram-container">letter = "A" | "B" | "C" | "D" | "E" | "F" | "G"
+       | "H" | "I" | "J" | "K" | "L" | "M" | "N"
+       | "O" | "P" | "Q" | "R" | "S" | "T" | "U"
+       | "V" | "W" | "X" | "Y" | "Z" | "a" | "b"
+       | "c" | "d" | "e" | "f" | "g" | "h" | "i"
+       | "j" | "k" | "l" | "m" | "n" | "o" | "p"
+       | "q" | "r" | "s" | "t" | "u" | "v" | "w"
+       | "x" | "y" | "z" ;
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+symbol = "[" | "]" | "{" | "}" | "(" | ")" | "&lt;" | "&gt;"
+       | "'" | '"' | "=" | "|" | "." | "," | ";" ;</pre>
+<h2 id="代码测试"><a class="header-anchor" href="#代码测试"></a>代码测试</h2>
 <figure class="highlight golang"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *raftNodePersister)</span> <span class="title">ReadByBytes</span><span class="params">(b []<span class="keyword">byte</span>)</span> <span class="title">error</span></span> {</span><br><span class="line">	<span class="keyword">if</span> err := gob.NewDecoder(bytes.NewBuffer(b)).Decode(r); err != <span class="literal">nil</span> {</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *raftNodePersister)</span> <span class="title">WriteByBytes</span><span class="params">()</span> <span class="params">([]<span class="keyword">byte</span>, error)</span></span> {</span><br><span class="line">	<span class="keyword">var</span> buf bytes.Buffer</span><br><span class="line">	<span class="keyword">if</span> err := gob.NewEncoder(&amp;buf).Encode(r); err != <span class="literal">nil</span> {</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> buf.Bytes(), <span class="literal">nil</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <hr class="footnotes-sep">
 <section class="footnotes">
@@ -249,7 +292,7 @@
         </a>
     </div>
     <div class="toc-main">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式测试"><span class="toc-text">数学公式测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mermaid测试"><span class="toc-text">mermaid测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码测试"><span class="toc-text">代码测试</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式测试"><span class="toc-text">数学公式测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mermaid测试"><span class="toc-text">mermaid测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EBNF测试"><span class="toc-text">EBNF测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码测试"><span class="toc-text">代码测试</span></a></li></ol>
     </div>
 </div>
 
@@ -348,7 +391,7 @@
                             <h4><a href="/2019/03/26/blog-test-ar/">博客支持功能</a></h4>
                             <div class="read-next-card-meta">
                                 <p><time datetime="2019-03-26">26 3月 2019</time> –
-                                    2min read</p>
+                                    5min read</p>
                             </div>
                         </li>
                         
@@ -565,7 +608,18 @@
         }
     });
 </script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-svg.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-svg.js"></script>
+
+
+
+
+<script src="/js/ebnf.js"></script>
+
+<script>
+    document.querySelectorAll(".diagram-container").forEach(item => {
+        item.innerHTML = EBNF(item.textContent);
+    });
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
